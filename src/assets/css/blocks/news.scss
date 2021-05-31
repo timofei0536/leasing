@@ -1,0 +1,32 @@
+.news {
+    background: #F6F6F6;
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 128rem;
+        width: 100%;
+        // margin-bottom: -8.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-direction: column;
+            margin-bottom: -4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 7rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 4.5rem;
+        }
+    }
+}

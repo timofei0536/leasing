@@ -1,0 +1,72 @@
+.request {
+    background: #F2F2F2;
+    padding: 9.5rem 0 7rem;
+    position: relative;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 7rem;
+    }
+
+    .center-wrap {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('~img/svg/request-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media screen and (max-width:$large_mobile) {
+            background-image: url('~img/svg/request-arrow--mobile.svg');
+            height: 27%;
+            top: 11%;
+        }
+    }
+
+    &::after {
+        content: '';
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-image: url('~img/svg/request-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 4.5rem;
+        position: relative;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+    }
+
+    &__form {
+        max-width: 84rem;
+        width: 100%;
+        margin: 0 auto;
+
+        .popup & {
+            max-width: 100%;
+        }
+    }
+}

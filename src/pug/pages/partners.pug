@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Партнеры';
+    - var pageClass = 'partners-page';
+
+block content
+    +main-screen({title:'Партнеры ',style:"background-image: url('assets/images/png/partners-img.png')"})
+    include ../includes/partners
+    include ../includes/faq

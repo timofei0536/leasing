@@ -1,0 +1,11 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Услуги';
+    - var pageClass = 'services-page';
+
+block content
+    +main-screen({title:'Услуги',style:"background-image: url('assets/images/png/news-img.png')"})
+    include ../includes/conditions
+    include ../includes/products
+    include ../includes/related-services

@@ -1,0 +1,106 @@
+.breadcrumbs {
+    margin-bottom: 6.5rem;
+    position: relative;
+    z-index: 3;
+
+    @media screen and (max-width:$large_tablet) {
+        margin-bottom: 4rem;
+    }
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        padding-right: 1.6rem;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+
+
+        &+.breadcrumbs__item {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 0.5rem;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.44);
+                right: calc(100% + 0.7rem);
+            }
+        }
+
+        &--desktop {
+            @media screen and (max-width:$large_tablet) {
+                display: none;
+            }
+        }
+
+        &--color {
+            .breadcrumbs__link {
+                color: $gray;
+            }
+
+            &+.breadcrumbs__item {
+                &:before {
+                    background-color: $gray;
+                }
+            }
+        }
+
+        span {
+            font-size: 1.2rem;
+            line-height: 1;
+            color: $secondary-color;
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        line-height: 110%;
+        color: rgba(255, 255, 255, 0.44);
+        transition: color 0.5s;
+        cursor: pointer;
+
+
+
+        @media screen and (max-width:$large_tablet) {
+            color: $primary-color;
+            padding-left: calc(2.2rem + 1rem);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 2.2rem;
+                height: 1.2rem;
+                background-image: url('~img/svg/breadcrumbs__link-arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+
+        &--desktop {
+            @media screen and (max-width:$large_tablet) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @media screen and (max-width:$large_tablet) {
+                display: block;
+            }
+        }
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

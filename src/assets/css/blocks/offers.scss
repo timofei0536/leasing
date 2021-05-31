@@ -1,0 +1,254 @@
+.offers {
+	display: flex;
+	align-items: center;
+	padding-bottom: 9rem;
+	padding-top: 9rem;
+	border-bottom: 1px solid #f2f2f2;
+	transition: border-color 1s;
+	border-color: transparent;
+
+	.services & {
+		&--line {
+			border-color: #f2f2f2;
+		}
+	}
+
+	@media screen and (max-width: $large_tablet) {
+		flex-direction: column;
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+
+	.deal & {
+		@media screen and (max-width: $large_tablet) {
+			border: none;
+			padding-bottom: 0;
+		}
+
+		&--line {
+			border-bottom: 1px solid #e3e5e8;
+		}
+	}
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+		border: none;
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		width: 45%;
+		margin-right: 20rem;
+
+		@media screen and (max-width: $large_tablet) {
+			width: 100%;
+			margin-right: 0;
+			flex-direction: column;
+			padding: 0 20px;
+		}
+
+		&--arrow {
+			position: relative;
+			width: 50%;
+			margin-right: 0;
+
+			@media screen and (max-width: $large_tablet) {
+				width: 100%;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -1.2rem;
+				width: 4.5rem;
+				height: 10.5rem;
+				background-image: url('~img/svg/offers-arrow.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+
+				@media screen and (max-width: $large_tablet) {
+					top: calc(100% - 1rem);
+					right: auto;
+					left: 50%;
+					transform: translateX(-50%);
+					background-image: url('~img/svg/offers-arrow--mobile.svg');
+					z-index: 3;
+					height: 2.2rem;
+				}
+			}
+		}
+
+		&-img {
+			margin-right: 4rem;
+			max-width: 17.2rem;
+			width: 100%;
+
+			@media screen and (max-width: $large_tablet) {
+				max-width: 10rem;
+				margin-bottom: 1.5rem;
+				margin-right: 0;
+			}
+
+			>div {
+				position: relative;
+				padding-bottom: 100%;
+				background-color: $white--darken;
+				border-radius: 50%;
+				overflow: hidden;
+
+				@media screen and (max-width: $large_tablet) {
+					svg {
+						display: none !important;
+					}
+
+					img {
+						display: block !important;
+					}
+				}
+
+				img {
+					display: none;
+				}
+
+				svg {
+					display: block;
+				}
+
+				svg,
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 34%;
+				}
+			}
+
+			&--57 {
+
+				div svg,
+				div img {
+					width: 57%;
+				}
+			}
+
+			&--51 {
+
+				div svg,
+				div img {
+					width: 51%;
+
+					@media screen and (max-width: $large_tablet) {
+						width: 49%;
+					}
+				}
+			}
+
+			&--38 {
+
+				div svg,
+				div img {
+					width: 38%;
+				}
+			}
+
+			&--53 {
+
+				div svg,
+				div img {
+					width: 53%;
+				}
+			}
+
+			&--small {
+				max-width: 15.4rem;
+
+				@media screen and (max-width: $large_tablet) {
+					max-width: 10rem;
+				}
+
+				>div {
+					background-color: #f9f9f9;
+				}
+			}
+
+			&--border {
+				max-width: 15.4rem;
+				border: 1px solid $gray--lightest;
+				border-radius: 50%;
+
+				@media screen and (max-width: $large_tablet) {
+					max-width: 10rem;
+					transform: rotate(-90deg);
+				}
+
+				>div {
+					background-color: inherit;
+				}
+
+				&+.offers__left-title {
+					max-width: 29rem;
+					width: 100%;
+				}
+			}
+		}
+
+		&-title {
+			font-weight: 600;
+			font-size: 2.2rem;
+			line-height: 170%;
+			color: $secondary-color;
+
+			@media screen and (max-width: $large_tablet) {
+				font-size: 2rem;
+				text-align: center;
+				margin-bottom: 4rem;
+
+				.deal & {
+					margin-bottom: 5.5rem;
+				}
+			}
+		}
+	}
+
+	&__right {
+		@media screen and (max-width: $large_tablet) {
+			padding: 0 20px;
+		}
+
+		&--padding {
+			padding-left: 16rem;
+			width: 50%;
+			position: relative;
+
+			@media screen and (max-width: $large_tablet) {
+				width: 100%;
+				padding: 0 20px;
+
+				.deal & {
+					background-color: $bg;
+					padding-top: 5.5rem;
+					padding-bottom: 5.5rem;
+
+					.offers__list {
+						max-width: $large_mobile;
+						margin: 0 auto;
+					}
+				}
+			}
+
+			.offers__list {
+				max-width: 42rem;
+				width: 100%;
+			}
+		}
+	}
+}

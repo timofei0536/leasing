@@ -1,0 +1,27 @@
+.popup-content {
+	width: 100%;
+	text-align: center;
+
+	svg {
+		width: 5rem;
+		margin-bottom: 6.5rem;
+
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 2.4rem;
+		line-height: 140%;
+		color: $primary-color;
+		margin-bottom: 2.4rem;
+	}
+
+	&__subtitle {
+		font-size: 1.6rem;
+		line-height: 160%;
+		color: $gray--dark;
+	}
+}

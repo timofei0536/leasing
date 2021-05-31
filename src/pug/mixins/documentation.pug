@@ -1,0 +1,26 @@
+mixin documentation(params)
+    section.documentation(class=params.class1)
+        .center-wrap
+            if params.document == 'documentation-page'
+                .documentation__box
+                    h2.documentation__title.simple-title.oh-wrap
+                        span.oh Документы для Лизингополучателей
+                    .documentation__list
+                        +download({link:'Перечень документов для лизинга',href:'#'})
+                        +download({link:'Полный перечень документов',href:'#'})
+                        +download({link:'Анкета клиента',href:'#'})
+                .documentation__box
+                    h2.documentation__title.simple-title.oh-wrap
+                        span.oh Документы для Поставщиков
+                    +download({link:'Перечень документов для Поставщика',href:'#'})
+            else if params.document == 'investors-page'
+                .documentation__box
+                    h2.documentation__title.simple-title Отчетность компании за 2020 год
+                    +download({link:'Перечень документов для лизинга',href:'#'})
+                    +download({link:'Полный перечень документов',href:'#'})
+                    +download({link:'Анкета клиента',href:'#'})
+                .documentation__box
+                    h2.documentation__title.simple-title Отчетность компании за 2020 год             
+                    +download({link:'Перечень документов для лизинга',href:'#'})
+                    +download({link:'Полный перечень документов',href:'#'})
+                    +download({link:'Анкета клиента',href:'#'})

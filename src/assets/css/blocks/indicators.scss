@@ -1,0 +1,161 @@
+.indicators {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        position: relative;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-wrap: wrap;
+            margin-bottom: -5.2rem;
+        }
+
+        &--column {
+            color: $gray--dark;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            @media screen and (max-width:$large_tablet) {
+                .indicators__item {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        &:first-child {
+            border-bottom: 1px solid #E3E5E8;
+            padding-bottom: 9rem;
+
+            @media screen and (max-width:$large_tablet) {
+                padding-bottom: 3.5rem;
+            }
+        }
+
+        &:last-child {
+            padding-top: 9rem;
+
+            @media screen and (max-width:$large_tablet) {
+                padding-top: 3.5rem;
+            }
+        }
+    }
+
+    &__item {
+        @media screen and (max-width:$large_tablet) {
+            width: 50%;
+            margin-bottom: 5.2rem;
+        }
+
+        &--width {
+            max-width: 21.5rem;
+            width: 100%;
+
+            @media screen and (max-width:$large_tablet) {
+                max-width: 15.5rem;
+            }
+
+            .indicators__item-text {
+                max-width: 19rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    max-width: 100%;
+                }
+            }
+
+
+        }
+
+        &--symbol {
+            .indicators__item-text {
+                padding-left: 1rem;
+            }
+
+            .indicators__item-number {
+                position: relative;
+                padding-left: 2rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    padding-left: 1rem;
+                }
+
+                &::before {
+                    content: '\2211';
+                    position: absolute;
+                    bottom: 1.8rem;
+                    left: 0;
+                    font-size: 2.5rem;
+
+                    @media screen and (max-width:$large_tablet) {
+                        bottom: 0;
+                        font-size: 1.8rem;
+                        bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        &-number {
+            font-size: 8rem;
+            line-height: 96/80*1;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 5.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            &--symbol {
+                position: relative;
+                padding-left: 2rem;
+
+                &::before {
+                    content: '\2211';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    font-size: 2.5rem;
+                }
+            }
+
+
+            sub {
+                font-size: 1.5rem;
+                line-height: 18/15*1;
+                position: absolute;
+                bottom: 1.7rem;
+                left: calc(100% + 1rem);
+
+                @media screen and (max-width:$large_tablet) {
+                    font-size: 1.4rem;
+                    left: 100%;
+                    bottom: 1rem;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            line-height: 160%;
+            text-transform: lowercase;
+            max-width: 19rem;
+            width: 100%;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.2rem;
+                max-width: 15rem;
+            }
+        }
+    }
+
+
+
+
+}

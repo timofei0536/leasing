@@ -1,0 +1,43 @@
+section.request
+    .center-wrap 
+        h2.request__title.simple-title Заявка на лизинг
+        .request__form 
+            form.inputs(autocomplete="off")
+                .inputs__field-row
+                    .inputs__field-wrap.inputs__field-wrap--50
+                        input.inputs__field(type='text' id='text' name='text' autocomplete='off' required='' minlength='2')
+                        label.inputs__label(for='text')
+                            span.inputs__content
+                                | Название компании
+                    .inputs__field-wrap.inputs__field-wrap--50
+                        input.inputs__field(type='email' id='email' name='email' autocomplete='off' required='' )
+                        label.inputs__label(for='email')
+                            span.inputs__content
+                                | E-mail
+                .inputs__field-wrap
+                    input.inputs__field(type='text' id='text1' name='text1' autocomplete='off' required='' )
+                    label.inputs__label(for='text1')
+                        span.inputs__content
+                            | ФИО          
+                .inputs__field-row
+                    .inputs__field-wrap.inputs__field-wrap--50
+                        input.inputs__field(type='number' id='text2'  name='text2' autocomplete='off' required='' )
+                        label.inputs__label(for='text2')
+                            span.inputs__content
+                                | ИНН
+                    .inputs__field-wrap.inputs__field-wrap--50
+                        input.inputs__field(type="number" id='tel' name='tel' autocomplete='off' required='')
+                        label.inputs__label(for='tel')
+                            span.inputs__content
+                                | Телефон
+                .inputs__field-wrap.inputs__field-wrap--textarea
+                    textarea.inputs__field(name='textarea' placeholder='Комментарий')
+                .inputs__checkbox
+                    label.inputs__checkbox-label
+                        input.inputs__checkbox-input(type='checkbox' name='agree' required)
+                        span.inputs__checkbox-content
+                        | Нажатием кнопки «Отправить» Вы даете своё согласие на обработку своих персональных данных в соответствии с законом №152-ФЗ «О персональных данных» от 27.07.2006»
+                .inputs__btn
+                    //- input(type='submit' id='button' value="Отправить").btn
+                    button(type='submit' id='button').btn
+                        span.btn__title(for='button') Отправить

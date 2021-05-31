@@ -1,0 +1,15 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Контактная информация';
+    - var pageClass = 'contacts-page';
+
+block content
+    +main-screen({title:'Контактная информация',style:"background-image: url('assets/images/png/contacts-img.png')"})
+    include ../includes/contacts
+block script
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js') 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

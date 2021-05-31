@@ -1,0 +1,83 @@
+.presentation {
+	display: flex;
+	align-items: flex-start;
+
+	&:hover {
+		svg {
+			transform: translateY(1rem) !important;
+		}
+	}
+
+	svg {
+		width: 2.2rem;
+		transition: transform .5s;
+	}
+
+	&--column {
+		flex-direction: column;
+		align-items: center;
+
+		@media screen and (max-width:$large_tablet) {
+			flex-direction: row;
+		}
+
+		svg {
+			width: 6.7rem;
+		}
+
+		.presentation__border {
+			width: 5.6rem;
+			height: 1px;
+			margin: 3.6rem 0;
+
+			@media screen and (max-width:$large_tablet) {
+				display: none;
+			}
+		}
+
+		.presentation__title {
+			text-align: center;
+			max-width: 16rem;
+			width: 100%;
+
+			@media screen and (max-width:$large_tablet) {
+				max-width: 20rem;
+			}
+		}
+	}
+
+	&__border {
+		width: 1px;
+		height: 2.7rem;
+		background-color: rgba(224, 224, 224, 0.2);
+		margin: 0 2.5rem;
+	}
+
+	&__title {
+		max-width: 20rem;
+		width: 100%;
+
+		.oh {
+			color: $secondary-color;
+			font-weight: 600;
+			font-size: 1.5rem;
+			line-height: 140%;
+		}
+
+		@media screen and (max-width: $large_tablet) {
+			font-size: 1.1rem;
+		}
+	}
+
+	&__pdf {
+		display: block;
+		font-weight: 500;
+		line-height: 200%;
+		color: $gray--light;
+		margin-top: 2rem;
+
+		@media screen and (max-width:$large_tablet) {
+			display: none;
+		}
+	}
+}

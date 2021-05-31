@@ -1,0 +1,165 @@
+.products {
+	background-color: #fff;
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+
+	@media screen and (max-width: $large_tablet) {
+		padding-top: 7.5rem;
+		padding-bottom: 7.5rem;
+	}
+
+	&__title {
+		max-width: 63rem;
+		width: 100%;
+		margin-bottom: 6rem;
+
+		@media screen and (max-width: $large_tablet) {
+			text-align: center;
+			margin-bottom: 4.5rem;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: -4rem;
+
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: -2rem;
+		}
+	}
+
+	&__item {
+		width: calc((100% - 4rem * 3) / 4);
+		margin-bottom: 4rem;
+		position: relative;
+		transition: all 0.5s;
+
+		@media screen and (max-width: $large_tablet) {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		&:hover {
+			transform: translateY(-1rem);
+
+			.products__item-title {
+				transform: translateY(-3rem);
+			}
+
+			.products__item-arrow {
+				opacity: 1;
+			}
+			.products__item-img img {
+				transform: scale(1.08);
+			}
+		}
+
+		&:active {
+			.products__item-title {
+				transform: translateY(0);
+			}
+
+			.products__item-arrow {
+				opacity: 0;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.81);
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(51, 51, 51, 0.52);
+			z-index: 2;
+			transition: all 0.5s;
+		}
+
+		&--active {
+			pointer-events: none;
+
+			&::before {
+				background: rgba(255, 255, 255, 0.81);
+			}
+		}
+
+		&--hide {
+			margin-bottom: 0px !important;
+			padding: 0px !important;
+			opacity: 0 !important;
+			height: 0px !important;
+		}
+
+		&-img {
+			width: 100%;
+			overflow: hidden;
+
+			> div {
+				position: relative;
+				padding-bottom: 60.06%;
+
+				@media screen and (max-width: $large_tablet) {
+					padding-bottom: 68.06%;
+				}
+
+				img {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
+				}
+			}
+		}
+
+		&-title {
+			position: absolute;
+			left: 4.5rem;
+			bottom: 3.5rem;
+			max-width: 15rem;
+			width: 100%;
+			font-weight: 600;
+			font-size: 1.6rem;
+			line-height: 140%;
+			color: #ffffff;
+			z-index: 4;
+			transition: all 0.5s;
+
+			@media screen and (max-width: $large_tablet) {
+				left: 2rem;
+				bottom: 2.5rem;
+			}
+		}
+
+		&-arrow {
+			width: 3.4rem;
+			fill: $secondary-color;
+			position: absolute;
+			left: 4.5rem;
+			bottom: 3.5rem;
+			opacity: 0;
+			transition: all 0.5s;
+			z-index: 4;
+
+			@media screen and (max-width: $large_tablet) {
+				left: 2rem;
+				bottom: 2.5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+section.services
+    .center-wrap 
+        h2.simple-title.services__title Мы предлагаем
+        .services__offers
+            - var row = [];
+            - row.push({dataImgSrc:"assets/images/svg/offers-icons1.svg",idImg: "offers-icons1",title:'Лучшие финансовые условия',li1:'Низкие ставки',li2:'Специальные условия от поставщиков',li3:'Льготные тарифы от ведущих страховых компаний',li4:'Скидки по госпрограммам субсидирования',li5:false});
+            - row.push({dataImgSrc:"assets/images/svg/offers-icons2.svg",idImg: "offers-icons2",classSize:'offers__left-img--57',title:'Оперативность',li1:'Предварительный расчёт за 1 час',li2:'Одобрение заявки за 1 день',li3:'Работаем в ЭДО',li4:false,li5:false});
+            - row.push({dataImgSrc:"assets/images/svg/offers-icons3.svg",idImg: "offers-icons3",title:'Сопутствующие сервисы',classSize:'offers__left-img--38',li1:'Заключение и сопровождение импортных поставок',li2:'Организация логистики и таможенного оформления',li3:'Постановка техники на учёт',li4:'Обеспечение страхования',li5:false});
+            - row.push({dataImgSrc:"assets/images/svg/offers-icons4.svg",idImg: "offers-icons4",title:'Персональный подход',li1:'Персональный менеджер от заявки до окончания договора',li2:'Индивидуальные графики лизинговых платежей',li3:'Грейс периоды с учётом специфика бизнеса клиента',li4:'Финансирование нестандартных и сложных сделок',li5:false});
+            each val in row
+                +offers(val)(class=val.class)

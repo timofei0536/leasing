@@ -1,0 +1,38 @@
+.partners {
+    padding: 7rem 0 8rem;
+    text-align: center;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 0;
+        padding-bottom: 7rem;
+        text-align: left;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: $primary-color;
+        max-width: 83rem;
+        width: 100%;
+        margin: 0 auto 4rem;
+        line-height: 200%;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__descr {
+        line-height: 200%;
+        font-size: 1.6rem;
+        color: $gray--dark;
+        max-width: 91rem;
+        width: 100%;
+        margin: 0 auto;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.3rem;
+        }
+    }
+}

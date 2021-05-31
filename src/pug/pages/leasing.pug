@@ -1,0 +1,11 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Лизинг недвижимости';
+    - var pageClass = 'leasing-page';
+
+block content
+    +main-screen({menu:'leasing-page',title:'Лизинг недвижимости',style:"background-image: url('assets/images/png/leasing-img.png')"})
+    include ../includes/financial-conditions
+    include ../includes/leasing
+    include ../includes/request

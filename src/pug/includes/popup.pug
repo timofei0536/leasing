@@ -1,0 +1,59 @@
+#form.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('form')")
+            div
+            div
+        .popup__inner
+            h2.request__title.simple-title    Заявка на лизинг
+            .request__form 
+                form.inputs(autocomplete="off")
+                    .inputs__field-row
+                        .inputs__field-wrap.inputs__field-wrap--50
+                            input.inputs__field(type='text' id='textP' name='text' autocomplete='off' required='' minlength='2')
+                            label.inputs__label(for='textP')
+                                span.inputs__content
+                                    | Название компании
+                        .inputs__field-wrap.inputs__field-wrap--50
+                            input.inputs__field(type='email' id='emailP' name='email' autocomplete='off' required='' )
+                            label.inputs__label(for='emailP')
+                                span.inputs__content
+                                    | E-mail
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' id='text1P' name='text1' autocomplete='off' required='' )
+                        label.inputs__label(for='text1P')
+                            span.inputs__content
+                                | ФИО          
+                    .inputs__field-row
+                        .inputs__field-wrap.inputs__field-wrap--50
+                            input.inputs__field(type='number' id='text2P' name='text2' autocomplete='off' required='' )
+                            label.inputs__label(for='text2P')
+                                span.inputs__content
+                                    | ИНН
+                        .inputs__field-wrap.inputs__field-wrap--50
+                            input.inputs__field(type='number' id='telP' name='tel' autocomplete='off' required='' )
+                            label.inputs__label(for='telP')
+                                span.inputs__content
+                                    | Телефон
+                    .inputs__field-wrap.inputs__field-wrap--textarea
+                        textarea.inputs__field(name='textarea' placeholder='Комментарий')
+                    .inputs__checkbox
+                        label.inputs__checkbox-label
+                            input.inputs__checkbox-input(type='checkbox' name='agree' required)
+                            span.inputs__checkbox-content
+                            | Нажатием кнопки «Отправить» Вы даете своё согласие на обработку своих персональных данных в соответствии с законом №152-ФЗ «О персональных данных» от 27.07.2006»
+                    .inputs__btn
+                        button(type='submit' id='buttonP').btn
+                            span.btn__title(for='buttonP') Отправить
+                        //- input(type='submit' id='buttonP' value="Отправить").btn
+
+#thank.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('thank')")
+            div
+            div
+        .popup__inner
+            .popup-content
+                svg(viewBox='0 0 48 31' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M45.1405 2C35.593 10.441 19.0764 28.3636 16.498 28.3636C14.5826 28.3636 2 14.488 2 14.488' stroke='#00AEEF' stroke-width='4' stroke-linecap='round')
+                h2.popup-content__title Ваша заявка успешно отправлена
+                p.popup-content__subtitle В ближайшее время мы свяжемся с Вами

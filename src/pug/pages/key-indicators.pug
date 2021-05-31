@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Ключевые показатели';
+    - var pageClass = 'key-indicators-page';
+
+block content
+    +main-screen({menu:'key-indicators-page',class2:'main-screen--title',class1:'main-screen--pb',title:'Ключевые показатели',style:"background-image: url('assets/images/png/key-indicators-img.png')"})
+    include ../includes/key-indicators
+    +more-look({class:'more-look--border',style:"background-image: url('assets/images/png/investors-img.png')",title:'Инвесторам',href:'investors.html'})

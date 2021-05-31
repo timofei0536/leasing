@@ -1,0 +1,9 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Государственные программы поддержки';
+    - var pageClass = 'programs-page';
+
+block content
+    +main-screen({menu:'programs-page',title:'Государственные программы поддержки',style:"assets/images/png/programs-img.png')"})
+    include ../includes/programs

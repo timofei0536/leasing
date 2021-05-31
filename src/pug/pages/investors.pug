@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Инвесторам';
+    - var pageClass = 'investors-page';
+
+block content
+    +main-screen({menu:'investors-page',class1:'main-screen--pb',title:'Инвесторам',style:"background-image: url('assets/images/png/investors-img.png')"})
+    +documentation({document:'investors-page',class1:'documentation--padding'})
+    +more-look({class:'more-look--border',style:"background-image: url('assets/images/png/about-img.png')",title:'О компании',href:'about.html'})

@@ -1,0 +1,10 @@
+section.programs
+    .center-wrap
+        h2.programs__title.simple-title Государственные программы поддержки
+        .programs__offers
+            - var row = [];
+            - row.push({classImg:'offers__left-img--border',classLeft:'offers__left--arrow',classRight:'offers__right--padding',src:'assets/images/svg/programs-arow.svg',title:'Базовые финансовые условия',li1:'Аванс - от 10%',li2:'Срок лизинга - до 10 лет',li3:'Стоимость – от 5 млн. руб.',li4:'График платежей – индивидуальный',li5:'Возможность досрочного выкупа',li6:false});
+            - row.push({class:'programs-page',classImg:'offers__left-img--border',classLeft:'offers__left--arrow',classRight:'offers__right--padding',src:'assets/images/svg/programs-arow.svg',title:'Предмет лизинга',li1:'Здания',li2:'Офисные помещения',li3:'Торговые и складские площади',li4:'Коммерческие помещения',li5:'Производственные помещения',li6:'Имущественные комплексы'});
+            - row.push({classImg:'offers__left-img--border',classLeft:'offers__left--arrow',classRight:'offers__right--padding',src:'assets/images/svg/programs-arow.svg',title:'Дополнительные услуги',li1:'Консультации по вопросам подбора объекта недвижимости',li2:'Административно-правовое управление объектами',li3:'Управление инфраструктурой объекта',li4:false,li5:false,li6:false});
+            each val in row
+                +offers(val)(class=val.class)

@@ -1,0 +1,39 @@
+mixin offers(params)
+    .offers(class=params.class)
+        .offers__left(class=params.classLeft)
+            .offers__left-img(class=params.classImg,class=params.classSize)
+                div(id=params.idImg, data-srs-img=params.dataImgSrc)
+                  img(src=params.dataImgSrc alt="")
+            h3.offers__left-title.oh-wrap
+                oh.oh #{params.title}
+        .offers__right(class=params.classRight)
+            if params.class == 'programs-page'
+                ul.offers__list
+                    li.item-arrow #{params.li1}
+                    li.item-arrow #{params.li2}
+                    if params.li3 == false
+                    else
+                        li.item-arrow #{params.li3}
+                    if params.li4 == false
+                    else
+                        li.item-arrow #{params.li4}
+                    if params.li5 == false
+                    else
+                        li.item-arrow #{params.li5}
+                    if params.li6 == false
+                    else
+                        li.item-arrow #{params.li6}
+            else
+                ul.offers__list
+                    li.item-arrow #{params.li1}
+                    li.item-arrow #{params.li2}
+                    if params.li3 == false
+                    else
+                        li.item-arrow #{params.li3}
+                            a(href=params.href) #{params.link}
+                    if params.li4 == false
+                    else
+                        li.item-arrow #{params.li4}
+                    if params.li5 == false
+                    else
+                        li.item-arrow #{params.li5}

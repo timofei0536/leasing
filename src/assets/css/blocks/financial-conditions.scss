@@ -1,0 +1,127 @@
+.financial-conditions {
+    background-color: $bg;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 5.5rem;
+        padding-bottom: 7rem;
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+
+        @media screen and (max-width:$large_tablet) {
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: -4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: -2rem;
+        }
+    }
+
+    &__item {
+        width: calc((100% - 4rem * 2) / 3);
+        background: #FFFFFF;
+        box-shadow: 0px 1px 36px 13px rgba(21, 21, 21, 0.03);
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        &--hide {
+            margin-bottom: 0px !important;
+            padding: 0px !important;
+            opacity: 0 !important;
+            height: 0px !important;
+        }
+
+
+        &-title {
+            font-size: 1.4rem;
+            line-height: 170%;
+            color: $gray;
+            margin-bottom: 2rem;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &-number {
+            font-size: 5rem;
+            line-height: 60/50*1;
+            color: $primary-color;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 3.8rem;
+            }
+
+            sub {
+                font-size: 1.8rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    font-size: 1.4rem;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__left {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 35%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3.6rem;
+            height: 100%;
+            background-image: url("~img/svg/financial-conditions-line.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        svg {
+            width: 7rem;
+
+            @media screen and (max-width:$large_tablet) {
+                width: 5rem;
+            }
+        }
+    }
+
+    &__right {
+        width: 70%;
+        padding: 4.5rem 2rem 4.5rem 5.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 2rem 1rem 2rem 3rem;
+        }
+    }
+
+
+}

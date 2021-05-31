@@ -1,0 +1,107 @@
+.conditions {
+    background-color: $bg;
+    padding-top: 11rem;
+    padding-bottom: 8rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+
+        @media screen and (max-width:$large_tablet) {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: -4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: -2rem;
+        }
+    }
+
+    &__item {
+        width: calc((100% - 4rem * 3) / 4);
+        background: #FFFFFF;
+        box-shadow: 0px 1px 36px 13px rgba(21, 21, 21, 0.03);
+        margin-bottom: 4rem;
+        text-align: center;
+        padding: 6rem 4rem 4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            width: calc((100% - 2rem * 1) / 2);
+            margin-bottom: 2rem;
+            padding: 2rem;
+
+        }
+
+        &--hide {
+            margin-bottom: 0px !important;
+            padding: 0px !important;
+            opacity: 0 !important;
+            height: 0px !important;
+        }
+
+        &--big {
+            width: calc(50% - (4rem / 2));
+            padding: 6rem 6rem 4rem;
+
+            @media screen and (max-width:$large_tablet) {
+                width: 100%;
+                padding: 2rem;
+            }
+        }
+
+        &-title {
+            font-size: 1.4rem;
+            line-height: 170%;
+            color: $secondary-color;
+            margin-bottom: 2rem;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+            }
+        }
+
+        &-number {
+            font-size: 5rem;
+            line-height: 60/50*1;
+            color: $primary-color;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 3.8rem;
+            }
+
+            sub {
+                font-size: 1.8rem;
+                line-height: 22/18*1;
+
+
+                @media screen and (max-width:$large_tablet) {
+                    font-size: 1.2rem;
+                    bottom: 0;
+                }
+            }
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 140%;
+            color: $primary-color;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

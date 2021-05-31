@@ -1,0 +1,40 @@
+.page-trans {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	transform: translate(0px, -100%);
+
+	&__wrap {
+		display: flex;
+		align-items: flex-start;
+		transform: scale(1.4);
+	}
+
+	&__logo-left {
+		margin-right: 12px;
+	}
+
+	&__logo-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 8.5px 0 3px;
+		height: 42px;
+
+		div {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			overflow: hidden;
+		}
+	}
+}

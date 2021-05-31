@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Этапы сделки';
+    - var pageClass = 'deal-page';
+
+block content
+    +main-screen({menu:'deal-page',class1:'main-screen--pb',title:'Этапы сделки',style:"background-image: url('assets/images/png/stages-transaction-img.png')"})
+    include ../includes/deal
+    +more-look({moreLook:'deal-page',link:'заявка на лизинг',href:'#'})

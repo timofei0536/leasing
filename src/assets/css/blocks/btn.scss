@@ -1,0 +1,65 @@
+.btn {
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 6.4rem;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	background: $secondary-color;
+	padding: 0 7.5rem;
+	transition: background .5s;
+
+	@media screen and (max-width:$large_tablet) {
+		line-height: 5.4rem;
+		padding: 0 5rem;
+	}
+
+	&__title {
+		display: inline-block;
+		color: #fff;
+		font-weight: 600;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		transition: transform .3s;
+		position: relative;
+		cursor: pointer;
+
+		@media screen and (max-width:$large_tablet) {
+			font-size: 1rem;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: calc(100% - 1rem);
+			height: 100%;
+			background-image: url('~img/svg/btn-arrow.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 2.3rem;
+			transition: left .3s, opacity .3s;
+			opacity: 0;
+			will-change: transform;
+
+			@media screen and (max-width:$large_tablet) {
+				width: 1.5rem;
+			}
+		}
+	}
+
+	&:hover {
+		background-color: #009BD5;
+
+		.btn__title {
+			transform: translateX(-1rem);
+
+			&:before {
+				left: calc(100% + 2rem);
+				opacity: 1;
+			}
+		}
+	}
+}

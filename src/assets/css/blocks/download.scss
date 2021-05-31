@@ -1,0 +1,52 @@
+.download {
+    max-width: 92rem;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 36px 13px rgba(21, 21, 21, 0.04);
+    margin: 0 auto 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4.5rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-left: 2rem;
+        margin: 0 auto 2.5rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        .download__link {
+            color: $secondary-color;
+        }
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 1.7rem;
+        line-height: 160%;
+        color: $primary-color;
+        transition: color .5s;
+        max-width: 37rem;
+        width: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__icon {
+        height: 100%;
+        margin-left: auto;
+        position: relative;
+        padding: 4.5rem 4rem;
+        border-left: 1px solid #F1F1F5;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 4.3rem 2rem;
+            border: none;
+        }
+    }
+}

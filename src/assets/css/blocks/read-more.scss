@@ -1,0 +1,55 @@
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width:$large_tablet) {
+        display: none;
+    }
+
+    &:hover {
+        .read-more__link {
+            &:before {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__link {
+        color: $gray--dark;
+        font-size: 1.3rem;
+        margin-right: 0.6rem;
+        position: relative;
+        transition: all .5s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: -2px;
+            width: 0%;
+            height: 1px;
+            background: $gray--dark;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+    }
+
+    &__arrow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2.8rem;
+        fill: $gray--dark;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &__icon {
+        width: 0.8rem;
+        fill: $secondary-color;
+        transition: all .5s;
+    }
+}

@@ -1,0 +1,41 @@
+.related-services {
+    background-color: $bg;
+    padding-top: 8rem;
+    padding-bottom: 10.5rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2rem;
+            margin-bottom: 5.5rem;
+        }
+    }
+
+    &__list {
+        max-width: 120rem;
+        width: 100%;
+        column-count: 2;
+        column-gap: 22.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            column-count: 1;
+        }
+
+        .item-arrow {
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.4rem;
+
+                &::before {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

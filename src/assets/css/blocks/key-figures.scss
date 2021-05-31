@@ -1,0 +1,40 @@
+.key-figures {
+    padding-top: 14rem;
+    padding-bottom: 12rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 5rem;
+        padding-bottom: 11rem;
+    }
+
+    &__wrap {
+        display: flex;
+        max-width: 119rem;
+        width: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__left {
+        padding-top: 3rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding-top: 0;
+        }
+    }
+
+    &__right {
+        max-width: 58rem;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    &__title {
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 6rem;
+        }
+    }
+}

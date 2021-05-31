@@ -1,0 +1,82 @@
+mixin main-screen(params)
+    section#scroll-top.main-screen(class=params.class1,class=params.class2)
+        .main-screen__background(style=params.style)
+        .center-wrap
+            .main-screen__breadcrumbs 
+                .breadcrumbs
+                    if params.menu == 'leasing-page'
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link.breadcrumbs__link--desktop(href="/") Главная
+                                a.breadcrumbs__link.breadcrumbs__link--mobile(href="services.html") Услуги
+                            li.breadcrumbs__item.breadcrumbs__item--desktop
+                                span Услуги
+                    else if params.menu == 'programs-page'
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="/") Главная
+                            li.breadcrumbs__item.breadcrumbs__item--desktop
+                                span Услуги
+                    else
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="/") Главная
+            h2.main-screen__title #{params.title}
+            if params.menu == 'history-page' 
+                .main-screen__menu
+                    ul.main-screen__menu-list 
+                        li.main-screen__menu-item 
+                            a(href="about.html").main-screen__menu-link О компании
+                        li.main-screen__menu-item 
+                            a(href="history.html").main-screen__menu-link.main-screen__menu-link--active История
+                        li.main-screen__menu-item 
+                            a(href="key-indicators.html").main-screen__menu-link Ключевые показатели
+                        li.main-screen__menu-item 
+                            a(href="investors.html").main-screen__menu-link Инвесторам
+            else if params.menu == 'investors-page' 
+                .main-screen__menu
+                    ul.main-screen__menu-list 
+                        li.main-screen__menu-item 
+                            a(href="about.html").main-screen__menu-link О компании
+                        li.main-screen__menu-item 
+                            a(href="history.html").main-screen__menu-link История
+                        li.main-screen__menu-item 
+                            a(href="key-indicators.html").main-screen__menu-link Ключевые показатели
+                        li.main-screen__menu-item 
+                            a(href="investors.html").main-screen__menu-link.main-screen__menu-link--active Инвесторам
+            else if params.menu == 'key-indicators-page' 
+                .main-screen__menu
+                    ul.main-screen__menu-list 
+                        li.main-screen__menu-item 
+                            a(href="about.html").main-screen__menu-link О компании
+                        li.main-screen__menu-item 
+                            a(href="history.html").main-screen__menu-link История
+                        li.main-screen__menu-item 
+                            a(href="key-indicators.html").main-screen__menu-link.main-screen__menu-link--active Ключевые показатели
+                        li.main-screen__menu-item 
+                            a(href="investors.html").main-screen__menu-link Инвесторам
+            else if params.menu == 'deal-page'
+                .main-screen__menu
+                    ul.main-screen__menu-list 
+                        li.main-screen__menu-item 
+                            a(href="deal.html").main-screen__menu-link.main-screen__menu-link--active Этапы сделки
+                        li.main-screen__menu-item 
+                            a(href="documentation.html").main-screen__menu-link Документы
+            else if params.menu == 'documentation-page'
+                .main-screen__menu
+                    ul.main-screen__menu-list 
+                        li.main-screen__menu-item 
+                            a(href="deal.html").main-screen__menu-link Клиентам
+                        li.main-screen__menu-item 
+                            a(href="documentation.html").main-screen__menu-link.main-screen__menu-link--active Документы
+            else if params.menu == 'about-page'
+                .main-screen__menu
+                    ul.main-screen__menu-list 
+                        li.main-screen__menu-item 
+                            a(href="about.html").main-screen__menu-link.main-screen__menu-link--active О компании
+                        li.main-screen__menu-item 
+                            a(href="history.html").main-screen__menu-link История
+                        li.main-screen__menu-item 
+                            a(href="key-indicators.html").main-screen__menu-link Ключевые показатели
+                        li.main-screen__menu-item 
+                            a(href="investors.html").main-screen__menu-link Инвесторам

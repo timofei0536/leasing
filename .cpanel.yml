@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export REPOPATH=/home/atstudio/repositories/tss/dist/*
+    - export SITEPATH=/home/atstudio/tss.atstudio1.com
+    - /bin/rsync -rav --exclude '.git' --exclude '.cpanel.yml' --del $REPOPATH $SITEPATH

@@ -1,0 +1,11 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Новости компании';
+    - var pageClass = 'news-page';
+
+block content
+    +main-screen({class:'main-screen--title',title:'Новости компании',style:"background-image: url('assets/images/png/news-img1.png')"})
+    include ../includes/about-news
+//- block script
+

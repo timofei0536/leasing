@@ -1,0 +1,47 @@
+.item-arrow {
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 170%;
+    color: $gray--dark;
+    padding-left: calc(2rem + 0.8rem);
+    margin-bottom: 2.5rem;
+
+    @media screen and (max-width:$large_tablet) {
+        font-size: 1.5rem;
+    }
+
+    .services & {
+        font-size: 1.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.8rem;
+        left: 0;
+        width: 0.5rem;
+        height: 0.8rem;
+        background-image: url('~img/svg/item-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    a {
+        color: $secondary-color;
+        transition: opacity .5s;
+        margin-left: 0.5rem;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Документы';
+    - var pageClass = 'documentation-page';
+
+block content
+    +main-screen({menu:'documentation-page',class1:'main-screen--pb',title:'Необходимые документы',style:"background-image: url('assets/images/png/documentation-img.png')"})
+    +documentation({document:'documentation-page'})
+    +more-look({class:'more-look--border', style:"background-image: url('assets/images/png/stages-transaction-img.png')",title:'Этапы сделки',href:'deal.html'})
+//- block script
+

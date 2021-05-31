@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'История компании';
+    - var pageClass = 'history-page';
+
+block content
+    +main-screen({menu:'history-page',class1:'main-screen--pb',title:'История компании',style:"background-image: url('assets/images/png/history-img.png')"})
+    include ../includes/history
+    +more-look({class:'more-look--border',style:"background-image: url('assets/images/png/key-indicators-img.png')",title:'Ключевые показатели',href:'key-indicators.html'})

@@ -1,0 +1,21 @@
+.toogles2 {
+	&__item {
+		&--active {
+			.toogles2__item-box {
+				display: block;
+			}
+
+			.toogles2__item-title {
+				span {
+					&::before {
+						opacity: 0;
+					}
+				}
+			}
+		}
+
+		&-box {
+			display: none;
+		}
+	}
+}

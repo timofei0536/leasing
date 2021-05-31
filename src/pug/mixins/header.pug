@@ -1,0 +1,50 @@
+mixin header(params)
+    header.header(class=params.class)
+        .center-wrap
+            .header__wrap
+                a(href="/").header__logo
+                    img.header__logo-static.header__logo-rotate(src='assets/images/svg/logoWhite.svg' alt='')
+                    img.header__logo-static(src='assets/images/svg/logoWhiteText.svg' alt='')
+                    img.header__logo-fixed.header__logo-rotate(src='assets/images/svg/logoColor.svg' alt='')
+                    img.header__logo-fixed(src='assets/images/svg/logoColorText.svg' alt='')
+                nav.header__nav
+                    ul.header__nav-list
+                        li.header__nav-item
+                            a.header__nav-link(href='about.html') О компании
+                            .header__drop
+                                a.header__drop-link(href='about.html') О компании
+                                a.header__drop-link(href='history.html') История
+                                a.header__drop-link(href='key-indicators.html') Ключевые показатели
+                                a.header__drop-link(href='investors.html') Инвесторам
+                        li.header__nav-item
+                            a.header__nav-link(href="services.html") Услуги
+                            .header__drop
+                                a.header__drop-link(href='leasing.html') Лизинг автотранспорта
+                                a.header__drop-link(href='leasing.html') Лизинг спецтехники
+                                a.header__drop-link(href='leasing.html') Лизинг борудования
+                                a.header__drop-link(href='leasing.html') Лизинг Недвижимости
+                                a.header__drop-link(href='text-page.html') Государственные программы поддержки
+                                a.header__drop-link(href='text-page.html') Продажа б/у активов
+                        li.header__nav-item
+                            a.header__nav-link(href="news.html") Новости
+                        li.header__nav-item
+                            a.header__nav-link(href="deal.html") Клиентам
+                            .header__drop
+                                a.header__drop-link(href='deal.html') Этапы сделки
+                                a.header__drop-link(href='documentation.html') Документы
+                        li.header__nav-item
+                            a.header__nav-link(href="/partners.html") Партнеры
+                            .header__drop
+                                a.header__drop-link(href='/partners.html#banks') Банки
+                                a.header__drop-link(href='/partners.html#companyes') Страховые компании
+                                a.header__drop-link(href='/partners.html#providers') Поставщики
+                        li.header__nav-item
+                            a.header__nav-link(href="contacts.html") Контакты
+                .header__phone
+                    a(href="tel:78126710011") +7 (812) 671-00-11
+                .header__btn
+                    .btn
+                        span.btn__title(onclick="show_popup('form')") заявка на лизинг
+                .header__burger
+                    div
+                    div

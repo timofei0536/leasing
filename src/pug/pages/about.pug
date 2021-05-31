@@ -1,0 +1,13 @@
+extends ../layout/main
+
+block variables
+    - var title = 'О компании';
+    - var pageClass = 'about-page';
+
+block content
+    +main-screen({menu:'about-page',class2:'main-screen--title',class1:'main-screen--pb',title:'О компании',style:"background-image: url('assets/images/png/about-img.png')"})
+    include ../includes/key-facts
+    include ../includes/company-presentation
+    include ../includes/key-figures
+    include ../includes/news
+    +more-look({href:'history.html',titleColor:'more-look__title--color',style:"background-image: url('assets/images/png/history-img.png')",class:'more-look--border',title:'История компании'})

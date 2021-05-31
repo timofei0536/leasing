@@ -1,0 +1,38 @@
+.deal {
+    padding-top: 10.5rem;
+    padding-bottom: 9rem;
+    position: relative;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-bottom: 0;
+        padding-top: 1.5rem;
+
+        .center-wrap {
+            max-width: 100%;
+            padding: 0;
+
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: #F6F6F6;
+        z-index: -1;
+
+        @media screen and (max-width:$large_tablet) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:$large_tablet) {
+        .item-arrow::before {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
